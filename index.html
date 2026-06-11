@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StrideShop | Premium Shoes</title>
+    <meta name="description" content="A modern online shoe shop landing page with HTML, CSS, JavaScript, Python, and PHP support." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav container">
+        <a class="brand" href="#">StrideShop</a>
+        <ul class="nav-links">
+          <li><a href="#featured">Featured</a></li>
+          <li><a href="#order">Order</a></li>
+          <li><a href="#seller">Seller</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <section class="hero-content container">
+        <div>
+          <p class="eyebrow">New season collection</p>
+          <h1>Step into style with every pair.</h1>
+          <p class="lead">Discover performance sneakers, classic runners, and premium streetwear shoes for every occasion.</p>
+          <a class="btn btn-primary" href="#featured">Shop now</a>
+        </div>
+        <aside class="hero-card">
+          <h2>Today’s pick</h2>
+          <p>UltraLight Pro</p>
+          <strong>Ksh 89</strong>
+          <span>Free shipping over $75</span>
+        </aside>
+      </section>
+    </header>
+
+    <main class="container">
+      <section id="featured" class="section">
+        <div class="section-heading">
+          <h2>Featured shoes</h2>
+          <p>Curated styles designed for comfort and confidence.</p>
+        </div>
+        <div id="product-grid" class="product-grid"></div>
+      </section>
+
+      <section id="order" class="section grid-two">
+        <article class="card">
+          <h2>Place an order</h2>
+          <p>Choose your favorite pair, enter your details, and we will confirm your order instantly.</p>
+          <form id="order-form" class="stack-form">
+            <label>
+              Full name
+              <input type="text" name="name" placeholder="John Doe" required />
+            </label>
+            <label>
+              Phone number
+              <input type="tel" name="phone" placeholder="0700000000" required />
+            </label>
+            <label>
+              Shoe model
+              <select id="shoe-select" name="shoe" required></select>
+            </label>
+            <label>
+              Quantity
+              <input type="number" name="quantity" min="1" value="1" required />
+            </label>
+            <button class="btn btn-primary" type="submit">Confirm order</button>
+          </form>
+          <p id="order-message" class="status-message" aria-live="polite"></p>
+        </article>
+
+        <article class="card">
+          <h3>Why customers love us</h3>
+          <ul class="feature-list">
+            <li>Secure checkout and quick delivery</li>
+            <li>Comfort-focused designs for daily wear</li>
+            <li>Easy returns and friendly support</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="seller" class="section card-grid">
+        <article class="card seller-panel">
+          <h2>Seller area</h2>
+          <p>Use the seller key to unlock the product entry form.</p>
+          <div id="seller-access" class="stack-form">
+            <label>
+              Seller key
+              <input id="seller-key" type="password" placeholder="Enter seller code" />
+            </label>
+            <button id="unlock-seller" class="btn btn-secondary" type="button">Unlock</button>
+            <p id="seller-access-message" class="status-message" aria-live="polite"></p>
+          </div>
+        </article>
+
+        <article id="seller-form-panel" class="card hidden">
+          <h3>Add a new shoe</h3>
+          <p>Only the seller can add new products to the shop.</p>
+          <form id="add-product-form" class="stack-form">
+            <label>
+              Product name
+              <input type="text" name="name" placeholder="New Runner X" required />
+            </label>
+            <label>
+              Price
+              <input type="number" name="price" min="1" placeholder="79" required />
+            </label>
+            <label>
+              Color
+              <input type="text" name="color" placeholder="Silver Grey" required />
+            </label>
+            <label>
+              Tag
+              <input type="text" name="tag" placeholder="New collection" required />
+            </label>
+            <label>
+              Product image
+              <input type="file" name="image" accept="image/*" />
+            </label>
+            <button class="btn btn-primary" type="submit">Add product</button>
+          </form>
+          <p id="product-message" class="status-message" aria-live="polite"></p>
+        </article>
+
+        <article class="card hidden" id="order-details-panel">
+          <h3>Customer orders</h3>
+          <p>Seller view: see each customer’s name, phone number, and what they ordered.</p>
+          <div id="order-details-list" class="feature-list"></div>
+        </article>
+      </section>
+
+      <section id="about" class="section card-grid">
+        <article class="card">
+          <h3>Fast delivery</h3>
+          <p>Quick dispatch and secure packaging for every order.</p>
+        </article>
+        <article class="card">
+          <h3>Comfort first</h3>
+          <p>Breathable materials and responsive cushioning for all-day wear.</p>
+        </article>
+        <article class="card">
+          <h3>Easy returns</h3>
+          <p>Try your shoes at home with our simple 30-day return policy.</p>
+        </article>
+      </section>
+
+      <section id="contact" class="section contact-card">
+        <h2>Need help?</h2>
+        <p>Contact our support team for size advice, returns, or custom orders.</p>
+        <p>Seller notifications for new orders are shown in the order confirmation message and can be forwarded to franknganga122@gmail.com.</p>
+        <a class="btn btn-secondary" href="mailto:franknganga122@gmail.com">franknganga122@gmail.com</a>
+      </section>
+    </main>
+
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
